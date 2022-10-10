@@ -1,0 +1,35 @@
+---
+- hosts: servers
+  become: yes
+  become_method: sudo
+  gather_facts: false
+
+  vars_files: 
+      - files/secret/credentials.yml
+
+  tasks: 
+  - name: Build image docker 
+    community.docker.docker_image:
+      name: "{{ imageback }}"
+      build:
+        path: /home/milica/Documents/projetA/student-list/simple_api
+      source: build
+    tags: image_docker
+  
+  - name: Create private container's network
+    community.docker.docker_network:
+      name: "{{ networkname }}"
+    tags: network
+
+  - name: Launch the container with the backend and connect it to the network
+    docker_container:
+      name: api-projet-a
+      recreate: "true"
+      image: "{{ imageback }}"
+      networks:
+        - name: "{{ networkname }}"
+      ports:
+        - "5000:5000"
+      volumes: 
+      - /home/milica/Documents/projetA/student-list/simple_api/student_age.json:/data/
+    tags: run_backend

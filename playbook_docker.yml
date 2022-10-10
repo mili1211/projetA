@@ -1,0 +1,63 @@
+---
+  - hosts: servers
+    become: yes
+    become_method: sudo
+    gather_facts: false
+
+    vars_files: 
+      - files/secret/credentials.yml
+      
+    tasks:
+      - name: Install aptitude
+        apt:
+          name: aptitude
+          state: latest
+          update_cache: true
+        tags: apt
+
+      - name: Install required system packages
+        apt: 
+          pkg:
+            - apt-transport-https
+            - ca-certificates
+            - curl
+            - software-properties-common
+            - python3-pip
+            - virtualenv
+            - python3-setuptools
+          state: latest
+          update_cache: true
+        tags: packages
+    
+      - name: Add Docker GPG apt key
+        apt_key: 
+          url: https://download.docker.com/linux/ubuntu/gpg
+          state: present
+        tags: docker_apt_key
+    
+      - name: Add Docker Repository
+        apt_repository:
+          repo: deb https://download.docker.com/linux/ubuntu focal stable
+          state: present
+        tags: docker_repository
+    
+      - name: Udate apt and install docker-ce
+        apt: 
+          name: docker-ce
+          state: latest
+          update_cache: true
+        tags: docker-ce
+    
+      - name: Install Docker Module for python
+        pip:
+          name: docker
+        tags: docker_for_python
+
+    
+
+
+ 
+
+
+
+  

@@ -1,0 +1,16 @@
+    ansible_password: "{{vault_ansible_password}}"
+
+    container_count: 1
+    default_container_name: docker
+    default_container_image: ubuntu
+    default_container_command: sleep 1
+
+    imageback: studentlist:latest
+
+    imagefront: php:apache
+
+    networkname: projeta
+
+    dest_home: /home/milica/Documents/projetA
+
+    gitlab_token: "{{vault_gitlab_token}}" 
