@@ -1,3 +1,2 @@
 ansible_host: 192.168.155.131
 ansible_user: milica
-ansible_connection: ssh

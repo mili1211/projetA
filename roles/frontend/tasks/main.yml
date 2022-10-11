@@ -1,14 +1,5 @@
 ---
-- hosts: servers
-  become: true
-  become_method: sudo
-  gather_facts: false
-
-  vars_files: 
-      - files/secret/credentials.yml
-
-  tasks:
-    - name: Launch the container with the frontend and connect it to the network
+    - name: Start the container with the frontend and connect it to the network
       docker_container: 
         name: ihm-projet-a
         ports:
@@ -21,4 +12,12 @@
         image: php:apache
         networks:
             - name: "{{ networkname }}"
-            
+
+    
+
+
+ 
+
+
+
+  

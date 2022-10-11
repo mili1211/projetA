@@ -1,0 +1,15 @@
+---
+- hosts: client2
+  become: yes
+  become_method: sudo
+  gather_facts: false
+
+  vars_files: 
+      - files/secret/credentials.yml
+  
+  roles:
+    - git
+    - docker
+    - backend
+    - frontend
+    

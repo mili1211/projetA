@@ -1,13 +1,4 @@
 ---
-  - hosts: servers
-    become: yes
-    become_method: sudo
-    gather_facts: false
-
-    vars_files: 
-      - files/secret/credentials.yml
-      
-    tasks:
       - name: Install aptitude
         apt:
           name: aptitude
@@ -43,10 +34,15 @@
     
       - name: Udate apt and install docker-ce
         apt: 
-          name: docker-ce
+          name: "{{ item }}"
           state: latest
           update_cache: true
-        tags: docker-ce
+        loop:
+          - docker-ce
+          - docker-ce-cli
+          - containerd.io
+          - docker-compose-plugin
+        tags: install_docker
     
       - name: Install Docker Module for python
         pip:
