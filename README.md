@@ -26,6 +26,6 @@ L'objectif de ce projet est d'apprendre comment automatiser le déploiement d'un
   - Durée : 1 jours 
   - Outils : GitHub, MarkDown
   
-  ##Schéma d'architecture 
+  ## Schéma d'architecture 
 
 
