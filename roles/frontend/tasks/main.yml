@@ -12,6 +12,7 @@
         image: php:apache
         networks:
             - name: "{{ networkname }}"
+      tags: container_front
 
     
 
