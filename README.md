@@ -27,6 +27,23 @@ L'objectif de ce projet est d'apprendre comment automatiser le déploiement d'un
   - Outils : GitHub, MarkDown
   
 ## Schéma d'architecture 
-<
+<img src="/images/schema_d'architecture.png">
+
+
+## Environnement technique
+
+Mon environnement est constitué de deux machines virtueles:
+- control node: Ansible
+- node cliente: Docker
+- 
+### Caractéristiques techniques des machines virtuels:
+- Supervisor: 
+  - VMware® Workstation 16 Pro
+  - version: 16.2.4 build-20089737
+- OS: Ubuntu 22.04.1 LTS   
+- Kernel: Linux 5.15.0-48-generic
+- CPU cores: 2
+- RAM : 3889 MB
+
 
 
