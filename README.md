@@ -20,7 +20,7 @@ L'objectif de ce projet est d'apprendre comment automatiser le déploiement d'un
   - Durée : 1 jours 
   - Outils : GitHub, MarkDown  
 ## Schéma d'architecture 
-<img src="/images/schema_d'archi.png">
+<img src="/images/schema_d'architecture.png">
 ## Environnement technique
 Mon environnement est constitué de deux machines virtueles:
 - control node: Ansible
