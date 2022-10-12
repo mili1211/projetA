@@ -35,7 +35,8 @@ L'objectif de ce projet est d'apprendre comment automatiser le déploiement d'un
 Mon environnement est constitué de deux machines virtueles:
 - control node: Ansible
 - node cliente: Docker
-- 
+
+
 ### Caractéristiques techniques des machines virtuels:
 - Supervisor: 
   - VMware® Workstation 16 Pro
