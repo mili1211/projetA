@@ -17,7 +17,8 @@
 
     - name: Clone the project to GitHub
       ansible.builtin.git:
-        repo: "https://{{ github_token }}@github.com/mili1211/projeta.git"
+        repo: "https://github.com/mili1211/projeta.git"
+        force: yes
         dest:  /home/milica/projeta
       tags: clone_repo2
       # when : 
