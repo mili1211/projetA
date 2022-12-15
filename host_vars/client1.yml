@@ -1,4 +1,4 @@
 # ansible_host: localhost
 ansible_connection: local
 ansible_user: milica
-ansible_password: {{user_password}}
+ansible_password: {{ user_password }}
