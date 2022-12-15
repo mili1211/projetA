@@ -19,7 +19,7 @@ echo "Ansible package version"
 python3 -m pip show ansible
 
 #Adding a directory to PATH:
-export PATH="/home/milica/.local/bin:$PATH"
+# export PATH="/home/milica/.local/bin:$PATH"
 
 #Create the ansible configuration file in case you don't have it
 #sudo mkdir /etc/ansible
