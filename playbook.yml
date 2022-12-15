@@ -3,12 +3,9 @@
   become: yes
   connection: local
   gather_facts: false
-
-  # vars_files: 
-  #   - secret/credentials.yml
   
   roles:
-    #- git
+    # - git
     - docker
     - backend
     - frontend

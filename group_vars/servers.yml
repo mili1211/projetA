@@ -2,5 +2,5 @@
 
     networkname: projeta
 
-    github_token: "{{ vault_ansible_token }}"
+    # github_token: "{{ vault_ansible_token }}"
  
