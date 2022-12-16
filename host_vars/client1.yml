@@ -1,4 +1,4 @@
 # ansible_host: localhost
-ansible_connection: local
+ansible_connection: 192.168.200.214
 ansible_user: milica
 ansible_password: "{{ user_password }}"
