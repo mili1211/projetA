@@ -22,6 +22,6 @@
       ports:
         - "5000:5000"
       volumes: 
-      - /home/milica//projeta/student-list/simple_api/student_age.json:/data/student_age.json
+      - /home/eva/projeta/student-list/simple_api/student_age.json:/data/student_age.json
     tags: run_backend
 
