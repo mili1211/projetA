@@ -11,7 +11,7 @@
           PASSWORD: "python"
         image: php:apache
         networks:
-            - name: projeta
+            - name: student-list:latest
       tags: container_front
 
     
