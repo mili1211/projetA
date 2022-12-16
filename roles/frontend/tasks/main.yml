@@ -5,7 +5,7 @@
         ports:
           - "80:80"
         volumes:
-          - /home/eva/projeta/student-list/website:/var/www/html
+          - /home/ceca/projeta/student-list/website:/var/www/html
         env:
           USERNAME: "toto"
           PASSWORD: "python"

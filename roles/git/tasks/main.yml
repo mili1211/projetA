@@ -6,20 +6,20 @@
        update_cache: yes
       tags: install_git
 
-    - name: Just get information about the repository whether or not it has already been cloned locally
-      ansible.builtin.git:
-        repo: 'https://github.com/mili1211/projeta.git'
-        dest: /home/eva/projeta
-        clone: no
-        update: no
-      register: repo_exist
-      tags: clone_repo
+    # - name: Just get information about the repository whether or not it has already been cloned locally
+    #   ansible.builtin.git:
+    #     repo: 'https://github.com/mili1211/projeta.git'
+    #     dest: /home/ceca/projeta
+    #     clone: no
+    #     update: no
+    #   register: repo_exist
+    #   tags: clone_repo
 
-    - name: Clone the project to GitHub
+    - name: Clone the project from GitHub
       ansible.builtin.git:
         repo: "https://github.com/mili1211/projeta.git"
         force: yes
-        dest:  /home/eva/projeta
-      when : 
-        - repo_exist.changed == false
-      tags: clone_repo2
+        dest:  /home/ceca/projeta
+      # when : 
+      #   - repo_exist.changed == false
+      # tags: clone_repo2

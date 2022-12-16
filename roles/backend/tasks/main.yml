@@ -3,7 +3,7 @@
     community.docker.docker_image:
       name: student-list:latest
       build:
-        path: /home/eva/projeta/student-list/simple_api
+        path: /home/ceca/projeta/student-list/simple_api
       source: build
     tags: image_docker
   
@@ -22,6 +22,6 @@
       ports:
         - "5000:5000"
       volumes: 
-      - /home/eva/projeta/student-list/simple_api/student_age.json:/data/student_age.json
+      - /home/ceca/projeta/student-list/simple_api/student_age.json:/data/student_age.json
     tags: run_backend
 
