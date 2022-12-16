@@ -17,8 +17,9 @@
       name: api-projet-a
       recreate: "true"
       image: student-list:latest
+
       networks:
-        - name: "{{ networkname }}"
+        - name: projeta
       ports:
         - "5000:5000"
       volumes: 
