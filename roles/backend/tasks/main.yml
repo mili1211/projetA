@@ -19,7 +19,7 @@
       image: student-list:latest
 
       networks:
-        - name: projeta
+        - name: student-list:latest
       ports:
         - "5000:5000"
       volumes: 
