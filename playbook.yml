@@ -5,7 +5,7 @@
   gather_facts: false
   
   roles:
-    # - git
+    - git
     - docker
     - backend
     - frontend
