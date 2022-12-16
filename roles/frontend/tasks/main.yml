@@ -11,7 +11,7 @@
           PASSWORD: "python"
         image: php:apache
         networks:
-            - name: "{{ networkname }}"
+            - name: projeta
       tags: container_front
 
     
